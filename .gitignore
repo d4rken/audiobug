@@ -1,0 +1,6 @@
+.gradle/
+.idea/
+app/app.iml
+app/build/
+audiobug.iml
+local.properties
