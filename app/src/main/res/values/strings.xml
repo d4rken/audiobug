@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Welcome to Audio Bug %s\n\nStart the service and you are ready to go!\n\nStop the service to configure the triggers.\nA long vibration indicates the recording began.\nThree short vibrations indicate the recording stopping.\nDue to hardware or custom ROMs the proximity trigger might not work on your device.\n\nUSE RESPONSIBLE\nRecording without consent might be illegal in your country.</string>
+    <string name="app_name">Audio Bug</string>
+    <string name="follow_darken">Follow darken</string>
+    <string name="keep_up_with_recent_developments">Keep up with recent developments.</string>
+    <string name="recording_saved_to">Recording saved to\n%s</string>
+    <string name="beginning_recording">Beginning recording</string>
+    <string name="no_sensor_trigger">No sensor trigger</string>
+    <string name="trigger_recording_by_shaking">Trigger recording by shaking</string>
+    <string name="trigger_by_proximity_sensor">Trigger by covering the proximity sensor</string>
+    <string name="sourcecode">Source code</string>
+    <string name="settings">Settings</string>
+    <string name="start">Start</string>
+    <string name="shake_slider_threshold">SOFT   shake threshold (%s)   VIOLENT</string>
+    <string name="shake_slider_count">LESS  shakes (%s)  MORE</string>
+    <string name="shake_slider_timeout">LESS   time between shakes (%s)  MORE</string>
+    <string name="proximity_slider_taps">LESS  taps (%s)   MORE</string>
+    <string name="proximity_slider_timeout">LESS   delay between taps (%s)   MORE</string>
+    <string name="open_source_summary">This app is open source.</string>
+    <string name="location_summary">Where the created recordings should be saved. Make sure that we can write there.</string>
+    <string name="location_title">Storage location</string>
+    <string name="service_notification_title">Service notification</string>
+    <string name="service_notification_summary">Show a notification when the service is active, but not necessarily recording</string>
+    <string name="recording_notification_title">Recording notification</string>
+    <string name="recording_notifcation_summary">Show a notification while recording</string>
+    <string name="wakelock_title">Use wakelock</string>
+    <string name="wakelock_summary">Ensures that the app can stay active while the screen is off.</string>
+    <string name="start_recording">Start recording</string>
+    <string name="stop_to_config">Stop the service to make configuration changes.</string>
+    <string name="info">Info</string>
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:audiobug="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_action_settings"
+        android:menuCategory="secondary"
+        android:title="@string/settings"
+        audiobug:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/follow"
+        android:icon="@drawable/ic_action_twitter"
+        android:menuCategory="secondary"
+        android:title="@string/follow_darken"
+        audiobug:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/info"
+        android:icon="@drawable/ic_action_twitter"
+        android:menuCategory="secondary"
+        android:title="@string/info"
+        audiobug:showAsAction="ifRoom|withText" />
+</menu>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="General settings">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="general.wakelock"
+            android:summary="@string/wakelock_summary"
+            android:title="@string/wakelock_title" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="general.notification.recorder"
+            android:summary="@string/recording_notifcation_summary"
+            android:title="@string/recording_notification_title" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="general.notification.service"
+            android:summary="@string/service_notification_summary"
+            android:title="@string/service_notification_title" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:dialogMessage="Storage location"
+            android:dialogTitle="Make sure the path is correct"
+            android:inputType="text"
+            android:key="general.location"
+            android:summary="@string/location_summary"
+            android:title="@string/location_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Misc">
+        <PreferenceScreen
+            android:icon="@drawable/ic_action_github"
+            android:key="misc.github"
+            android:summary="@string/open_source_summary"
+            android:title="@string/sourcecode" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

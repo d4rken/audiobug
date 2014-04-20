@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="false">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_runninglayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bt_toggle_recorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_action_record"
+                android:padding="8dp"
+                android:text="@string/start_recording" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/stop_to_config" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_configgroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_none"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_sensor_trigger" />
+
+            <RadioButton
+                android:id="@+id/rb_shake"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/trigger_recording_by_shaking" />
+
+            <LinearLayout
+                android:id="@+id/ll_shake_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <SeekBar
+                    android:id="@+id/sb_shake_threshold"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:max="2000" />
+
+                <TextView
+                    android:id="@+id/tv_shake_threshold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
+                    android:text="@string/shake_slider_threshold" />
+
+                <SeekBar
+                    android:id="@+id/sb_shake_count"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:max="6" />
+
+                <TextView
+                    android:id="@+id/tv_shake_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
+                    android:text="@string/shake_slider_count" />
+
+                <SeekBar
+                    android:id="@+id/sb_SHAKE_TIMEOUT"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:max="600" />
+
+                <TextView
+                    android:id="@+id/tv_shake_timeout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
+                    android:text="@string/shake_slider_timeout" />
+
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/rb_proximity"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/trigger_by_proximity_sensor" />
+
+            <LinearLayout
+                android:id="@+id/ll_proximity_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <SeekBar
+                    android:id="@+id/sb_proximity_count"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:max="6" />
+
+                <TextView
+                    android:id="@+id/tv_proximity_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/proximity_slider_taps" />
+
+                <SeekBar
+                    android:id="@+id/sb_proximity_timeout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:max="1000" />
+
+                <TextView
+                    android:id="@+id/tv_proximity_timeout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/proximity_slider_timeout" />
+            </LinearLayout>
+        </RadioGroup>
+    </LinearLayout>
+</ScrollView>
