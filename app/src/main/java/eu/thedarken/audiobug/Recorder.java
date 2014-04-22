@@ -36,11 +36,12 @@ public class Recorder {
         String _customPath = settings.getString(KEY_SAVE_LOCATION, DEFAULT_SAVE_LOCATION);
         File path = new File(_customPath);
         if (path.canWrite()) {
-            if (!path.exists())
-                path.mkdirs();
+            path.mkdirs();
         } else {
             path = new File(DEFAULT_SAVE_LOCATION);
+            path.mkdirs();
         }
+        
         settings.edit().putString(KEY_SAVE_LOCATION, path.getAbsolutePath()).commit();
 
         Date d = new Date();
