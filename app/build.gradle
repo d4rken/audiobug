@@ -11,6 +11,17 @@ android {
         versionName "2.0"
     }
 
+    buildTypes {
+
+        debug {
+            debuggable true
+        }
+
+        release {
+            debuggable false
+        }
+    }
+
     dependencies {
         compile 'com.android.support:appcompat-v7:19.+'
         compile 'com.android.support:support-v4:19.0.+'
