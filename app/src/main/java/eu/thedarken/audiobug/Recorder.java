@@ -3,6 +3,7 @@ package eu.thedarken.audiobug;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.media.MediaRecorder;
+import android.os.Build;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -52,23 +53,19 @@ public class Recorder {
         Log.d(TAG, "Recording will be stored in " + mRecordedFile.getAbsolutePath());
         mRecorder = new MediaRecorder();
         mRecorder.reset();
-
-        mRecorder.setAudioChannels(1);
         mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
 
-        mRecorder.setAudioEncodingBitRate(bitRate);
-        mRecorder.setAudioSamplingRate(samplingRate);
-        Boolean codecError = false;
-        try {
-            mRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
-        } catch (Exception e) {
-            codecError = true;
+        if (Build.VERSION.SDK_INT > 7) {
+            mRecorder.setAudioChannels(1);
+            mRecorder.setAudioEncodingBitRate(bitRate);
+            mRecorder.setAudioSamplingRate(samplingRate);
         }
-        if (codecError) {
-            mRecorder.setOutputFormat(MediaRecorder.OutputFormat.DEFAULT);
-        }
+
+        mRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
+
+
         mRecorder.setOutputFile(mRecordedFile.getAbsolutePath());
-        mRecorder.setAudioEncoder(3);
+        mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
         try {
             mRecorder.prepare();
         } catch (IllegalStateException e) {
