@@ -31,6 +31,10 @@
             android:key="misc.github"
             android:summary="@string/open_source_summary"
             android:title="@string/sourcecode" />
+        <PreferenceScreen
+            android:key="misc.privacy"
+            android:summary="@string/privacy_summary"
+            android:title="@string/privacy_title"/>
     </PreferenceCategory>
 
 </PreferenceScreen>

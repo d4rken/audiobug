@@ -29,4 +29,8 @@
     <string name="start_recording">Start recording</string>
     <string name="stop_to_config">Stop the service to make configuration changes.</string>
     <string name="info">Info</string>
+    <string name="privacy_summary">This app does not collect or share any user data.</string>
+    <string name="privacy_title">Privacy Policy</string>
+    <string name="action_stop_recording">Stop recording</string>
+    <string name="action_start_recording">Start recording</string>
 </resources>

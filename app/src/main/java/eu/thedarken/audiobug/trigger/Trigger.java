@@ -11,7 +11,7 @@ public abstract class Trigger {
         NONE, SHAKE, PROXIMITY
     }
 
-    public Trigger(Context context, TriggerListener mListener) {
+    Trigger(Context context, TriggerListener mListener) {
         this.mContext = context;
         this.mListener = mListener;
     }
@@ -20,17 +20,17 @@ public abstract class Trigger {
 
     public abstract void stop();
 
-    public TriggerListener getListener() {
+    TriggerListener getListener() {
         return mListener;
     }
 
-    protected Context getContext() {
+    Context getContext() {
         return mContext;
     }
 
 
     public interface TriggerListener {
-        public void onTriggered();
+        void onTriggered();
     }
 
 }

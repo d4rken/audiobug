@@ -47,15 +47,15 @@ public class AudioBugService extends Service implements Recorder.RecorderCallbac
     private Binder mBinder;
 
     public class LocalBinder extends Binder {
-        public boolean isRecording() {
+        boolean isRecording() {
             return mRecorder != null;
         }
 
-        public void toggleRecorder() {
+        void toggleRecorder() {
             toggleRecording();
         }
 
-        public void setRecorderListener(Recorder.RecorderCallback callback) {
+        void setRecorderListener(Recorder.RecorderCallback callback) {
             if (callback != null && isRecording())
                 callback.onRecordingStarted();
 

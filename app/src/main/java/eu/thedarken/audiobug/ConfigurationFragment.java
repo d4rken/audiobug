@@ -94,7 +94,7 @@ public class ConfigurationFragment extends Fragment implements ServiceConnection
 
             @Override
             public void onProgressChanged(SeekBar arg0, int arg1, boolean arg2) {
-                tvShakeThreshold.setText(getString(R.string.shake_slider_threshold, arg1));
+                tvShakeThreshold.setText(getString(R.string.shake_slider_threshold, String.valueOf(arg1)));
             }
         });
         int shakeThreshold = mSettings.getInt(ShakeTrigger.KEY_SHAKE_THRESHOLD, 1000);
@@ -115,7 +115,7 @@ public class ConfigurationFragment extends Fragment implements ServiceConnection
 
             @Override
             public void onProgressChanged(SeekBar arg0, int arg1, boolean arg2) {
-                tvShakeCount.setText(getString(R.string.shake_slider_count, arg1));
+                tvShakeCount.setText(getString(R.string.shake_slider_count, String.valueOf(arg1)));
             }
         });
         int shakeCount = mSettings.getInt(ShakeTrigger.KEY_SHAKE_COUNT, 3);
@@ -136,7 +136,7 @@ public class ConfigurationFragment extends Fragment implements ServiceConnection
 
             @Override
             public void onProgressChanged(SeekBar arg0, int arg1, boolean arg2) {
-                tvShakeTimeout.setText(getString(R.string.shake_slider_timeout, arg1));
+                tvShakeTimeout.setText(getString(R.string.shake_slider_timeout, String.valueOf(arg1)));
             }
         });
         int shakeTimeout = mSettings.getInt(ShakeTrigger.KEY_SHAKE_TIMEOUT, 300);
@@ -157,7 +157,7 @@ public class ConfigurationFragment extends Fragment implements ServiceConnection
 
             @Override
             public void onProgressChanged(SeekBar arg0, int arg1, boolean arg2) {
-                tvProximityCount.setText(getString(R.string.proximity_slider_taps, arg1));
+                tvProximityCount.setText(getString(R.string.proximity_slider_taps, String.valueOf(arg1)));
             }
         });
         int proximityCount = mSettings.getInt(ProximityTrigger.KEY_PROXIMITY_COUNT, 3);
@@ -178,7 +178,7 @@ public class ConfigurationFragment extends Fragment implements ServiceConnection
 
             @Override
             public void onProgressChanged(SeekBar arg0, int arg1, boolean arg2) {
-                tvProximityTimeout.setText(getString(R.string.proximity_slider_timeout, arg1));
+                tvProximityTimeout.setText(getString(R.string.proximity_slider_timeout, String.valueOf(arg1)));
             }
         });
         int proximityTimeout = mSettings.getInt(ProximityTrigger.KEY_PROXIMITY_TIMEOUT, 500);
@@ -259,9 +259,9 @@ public class ConfigurationFragment extends Fragment implements ServiceConnection
             layoutConfigParent.setVisibility(View.GONE);
             layoutRunningParent.setVisibility(View.VISIBLE);
             if (mBinder != null && mBinder.isRecording()) {
-                recorderToggleButton.setText("Stop recording");
+                recorderToggleButton.setText(R.string.action_stop_recording);
             } else {
-                recorderToggleButton.setText("Start recording");
+                recorderToggleButton.setText(R.string.action_start_recording);
             }
         } else {
             layoutConfigParent.setEnabled(true);
