@@ -1,4 +1,4 @@
-![logo](Banner.png)
+<img src="https://raw.githubusercontent.com/d4rken/audiobug/master/art/Banner.png" height="150">
 
 A small app that records audio and can be triggered in various ways.
 
